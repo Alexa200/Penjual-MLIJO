@@ -1,0 +1,240 @@
+<resources>
+    <!-- Apps -->
+    <string name="notification">Pemberitahuan</string>
+    <string name="chooseImageOrTakePicture">Pilih foto dari gallery atau ambil foto baru</string>
+    <string name="chooseImage">Pilih Foto</string>
+    <string name="takePicture">Ambil Foto Baru</string>
+    <string name="msg_simpan_img_error">simpan gambar error</string>
+    <string name="msg_gambar_tersimpan">gambar tersimpan</string>
+    <!-- Title -->
+    <string name="app_name">Mlijo Penjual</string>
+    <string name="title_activity_dashboard">Dashboard</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_activity_kelola_produk">Kelola Produk</string>
+    <string name="title_activity_tambah_produk">Tambah Produk</string>
+    <string name="title_activity_ubah_produk">Ubah Produk</string>
+    <string name="title_activity_kelola_penjualan">Kelola Penjualan</string>
+    <string name="title_activity_pengaturan">Pengaturan</string>
+    <string name="title_activity_kelola_profil">Pengaturan Profil</string>
+    <string name="title_activity_kelola_lokasi">Kelola Lokasi Berjualan</string>
+    <string name="title_activity_detail_transaksi">Detail Transaksi</string>
+    <string name="title_activity_ulasan">Daftar Ulasan</string>
+    <string name="title_activity_profil">Profil</string>
+    <!-- Hint -->
+    <string name="hint_pengaturan">  Pengaturan  </string>
+    <string name="action_settings">Settings</string>
+    <string name="search_hint">cari</string>
+    <!-- Button -->
+    <!-- Label -->
+    <string name="lbl_ya">Ya</string>
+    <string name="lbl_tidak">Tidak</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <!-- Pesan -->
+    <string name="msg_retry">Coba lagi</string>
+    <string name="msg_noInternet">Anda tidak tersambung internet, silahkan cek kembali koneksi anda</string>
+    <string name="msg_loading">loading...</string>
+    <string name="msg_error">Terjadi kesalahan, silahkan coba kembali</string>
+    <string name="msg_confirmLogOut">Apakah anda yakin akan logout?</string>
+    <string name="msg_keluarAplikasi">Apakah anda ingin keluar aplikasi?</string>
+    <string name="msg_tidak_boleh_kosong">Anda harus mengisi Form yang tersedia !</string>
+    <string name="msg_input_kode_verifikasi">SMS verifikasi telah dikirim ke nomor Anda yang terdaftar.
+        Harap masukan kode yang tertera pada sms ke dalam kolom di bawah.
+        Ulangi kirim kode apabila dalam 60 detik tidak ada sms masuk</string>
+    <!-- Label Lokasi -->
+    <string name="permission_rationale">Location permission is needed for core functionality</string>
+    <string name="permission_denied_explanation">Permission was denied, but is needed for core functionality.</string>
+    <string name="settings">Settings</string>
+    <string name="ok">OK</string>
+    <string name="launch_activity">Launch activity</string>
+    <string name="remove_location_updates">Remove location updates</string>
+    <string name="location_updated">Location Updated: %1$s</string>
+    <!-- Data -->
+    <string-array name="hari">
+        <item>Minggu</item>
+        <item>Senin</item>
+        <item>Selasa</item>
+        <item>Rabu</item>
+        <item>Kamis</item>
+        <item>Jumat</item>
+        <item>Sabtu</item>
+    </string-array>
+    <!-- Apps -->
+
+    <!-- PenjualModel -->
+    <string name="action_sign_in_short">Register</string>
+    <!-- Hint -->
+    <string name="hint_email">Email</string>
+    <string name="hint_password">Sandi Anda</string>
+    <string name="hint_name">Nama Lengkap</string>
+    <string name="hint_nama_penerima">Nama Penerima</string>
+    <string name="hint_noTelp">Nomor Telepon</string>
+    <string name="hint_alamat">Alamat Lengkap</string>
+    <string name="hint_judul_alamat">Isi dengan alamat sebagai(Contoh : Alamat Rumah)</string>
+    <string name="hint_hari_mulai">Mulai</string>
+    <string name="hint_hari_selesai">Selesai</string>
+    <string name="hint_jam_mulai">Buka mulai</string>
+    <string name="hint_jam_selesai">Selesai</string>
+    <!-- Button -->
+    <string name="btn_login">LOGIN</string>
+    <string name="btn_forgot_password">Lupa Sandi Anda?</string>
+    <string name="btn_reset_password">Reset Sandi</string>
+    <string name="btn_back"><![CDATA[<< Kembali]]></string>
+    <string name="btn_submit">Simpan</string>
+    <!-- Label -->
+    <string name="lbl_forgot_password">Lupa Sandi?</string>
+    <string name="lbl_kelola_profil">Kelola Profil</string>
+    <string name="lbl_atur_lokasi">Pengaturan Lokasi</string>
+    <!-- Pesan -->
+    <string name="msg_email_kosong">Mohon isi email anda</string>
+    <string name="msg_minimum_password">Sandi terlalu pendek, input minimal 6 karakter</string>
+    <string name="msg_password_kosong">Mohon isi password anda</string>
+    <string name="msg_auth_failed">Login gagal, silahkan cek email atau sandi anda</string>
+    <string name="msg_forgot_password">Kami membutuhkan email anda yang terdaftar untuk mengirimkan instruksi reset sandi.</string>
+    <string name="msg_kirim_link_password">Link reset password telah dikirim ke email anda</string>
+    <string name="msg_gagal_reset_password">Reset password gagal, ulangi kembali</string>
+    <string name="msg_buat_user_baru">Harap tunggu, sedang proses membuat akun anda</string>
+    <!-- Data -->
+    <string-array name="arrKecamatan">
+        <item>Kecamatan Blimbing</item>
+        <item>Kecamatan Lowokwaru</item>
+        <item>Kecamatan Klojen</item>
+        <item>Kecamatan Kedungkandang</item>
+        <item>Kecamatan Sukun</item>
+    </string-array>
+    <string-array name="arrKelurahan">
+        <item>Klojen</item>
+        <item>Rampal Celaket</item>
+        <item>Oro Oro Dowo</item>
+        <item>Samaan</item>
+        <item>Penanggungan</item>
+        <item>Gadingasri</item>
+        <item>Bareng</item>
+        <item>Kasin</item>
+        <item>Sukoharjo</item>
+        <item>Kauman</item>
+        <item>Kiduldalem</item>
+        <item>Kesatrian</item>
+        <item>Polehan</item>
+        <item>Purwantoro</item>
+        <item>Bunulrejo</item>
+        <item>PandanWangi</item>
+        <item>Blimbing</item>
+        <item>Purwodadi</item>
+        <item>Arjosari</item>
+        <item>Balearjosari</item>
+        <item>Jodipan</item>
+        <item>Polowijen</item>
+        <item>q</item>
+        <item>q</item>
+        <item>q</item>
+        <item>q</item>
+        <item>q</item>
+        <item>q</item>
+        <item>q</item>
+        <item>q</item>
+        <item>q</item>
+        <item>q</item>
+        <item>q</item>
+        <item>q</item>
+        <item>q</item>
+        <item>q</item>
+        <item>q</item>
+        <item>q</item>
+        <item>q</item>
+        <item>q</item>
+        <item>q</item>
+        <item>q</item>
+        <item>q</item>
+        <item>q</item>
+        <item>q</item>
+        <item>q</item>
+        <item>q</item>
+        <item>q</item>
+        <item>q</item>
+        <item>q</item>
+        <item>q</item>
+        <item>q</item>
+        <item>q</item>
+        <item>q</item>
+        <item>q</item>
+        <item>q</item>
+    </string-array>
+    <!-- PenjualModel -->
+
+    <!-- Dashboard -->
+    <!-- Hint -->
+    <!-- Button -->
+    <!-- Label -->
+    <string name="lbl_kategori">Kategori Produk</string>
+    <string name="lbl_penjual">Daftar Penjual</string>
+    <!-- Pesan -->
+    <!-- Dashboard -->
+
+
+    <!-- Produk -->
+    <!-- Hint -->
+    <!-- Button -->
+    <!-- Label -->
+    <string name="lbl_nama_produk">Nama Produk</string>
+    <string name="lbl_jumlah_produk">Jumlah Produk</string>
+    <string name="lbl_satuan_produk">Satuan Produk</string>
+    <!-- Pesan -->
+    <string name="msg_hapusProduk">Apakah anda yakin akan menghapus produk tersebut?</string>
+    <string name="msg_upload_gambar">(Harap memilih gambar dengan bijak, karena gambar tidak dapat diubah setelah terupload)</string>
+    <!-- Data -->
+    <string-array name="arrKategori">
+        <item>Sayuran</item>
+        <item>Buah</item>
+        <item>Daging</item>
+        <item>Ikan dan Makanan Laut</item>
+        <item>Palawija</item>
+        <item>Bumbu Dapur</item>
+        <item>Peralatan Dapur</item>
+        <item>Lain - lain</item>
+    </string-array>
+    <string-array name="arrSatuan">
+        <item>Gram(Gr)</item>
+        <item>KiloGram(Kg)</item>
+        <item>Mililiter(ml)</item>
+        <item>Liter(L)</item>
+        <item>Buah/Butir</item>
+        <item>Lusin</item>
+        <item>Ekor</item>
+    </string-array>
+    <!-- Produk -->
+
+
+    <!-- Kelola Penjualan Produk -->
+    <!-- Hint -->
+    <!-- Button -->
+    <!-- Label -->
+    <string name="lbl_riwayat_transaksi"> Riwayat Transaksi</string>
+    <string name="lbl_status_penjualan"> Status Penjualan</string>
+    <string name="lbl_pesanan_baru"> Pesanan Baru</string>
+    <string name="lbl_status_pembelian">Status Pembelian</string>
+    <string name="lbl_keterangan_pesanan">Detail Pesanan</string>
+    <string name="lbl_biaya_kirim">Biaya Kirim :</string>
+    <string name="lbl_status_transaksi">Status Transaksi :</string>
+    <string name="lbl_nama_penerima">Diterima oleh :</string>
+    <string name="lbl_alamat_kirim">Alamat Pengiriman</string>
+    <string name="lbl_total_harga">Total Harga Produk :</string>
+    <string name="lbl_porsi">(Harga 1 Porsi)</string>
+    <string name="title_activity_obrolan">Daftar Obrolan</string>
+    <string name="lbl_nama_konsumen">Nama Konsumen</string>
+    <!-- Pesan -->
+    <!-- Kelola Penjualan Produk -->
+
+    <!-- Ulasan -->
+    <!-- Hint -->
+    <!-- Button -->
+    <!-- Label -->
+    <string name="lbl_penilaian_penjual">Penilaian Penjual</string>
+    <string name="lbl_kualitas_produk">Kualitas Produk</string>
+    <string name="lbl_kualitas_pelayanan">Kualitas Pelayanan</string>
+    <string name="lbl_penilaian_konsumen">Penilaian Konsumen</string>
+    <string name="title_bantuan">Bantuan</string>
+    <!-- Pesan -->
+    <!-- Ulasan -->
+
+</resources>

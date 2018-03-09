@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorAccent">#303F9F</color>
+
+    <color name="colorPrimary">#41b54c</color>
+    <color name="colorPrimaryDark">#0b8f08</color>
+
+    <color name="bg_login">#26ae90</color>
+    <color name="bg_register">#2e3237</color>
+    <color name="bg_main">#428bca</color>
+    <color name="white">#ffffff</color>
+    <color name="grey_light">#ffe7e7e7</color>
+    <color name="grey_dark">#ffe0e0e0</color>
+    <color name="input_login">#222222</color>
+    <color name="input_login_hint">#999999</color>
+    <color name="input_register">#888888</color>
+    <color name="input_register_bg">#3b4148</color>
+    <color name="input_register_hint">#5e6266</color>
+    <color name="input_selected">#ff009688</color>
+    <color name="btn_login">#26ae90</color>
+    <color name="btn_login_bg">#eceef1</color>
+    <color name="lbl_name">#333333</color>
+    <color name="btn_logut_bg">#ff6861</color>
+    <color name="primary_text">#212121</color>
+    <color name="secondary_text">#757575</color>
+    <color name="cardviewBackground">#F2F5FA</color>
+    <color name="merah">#FF0000</color>
+    <color name="transparent_black">#94333232</color>
+
+    <color name="ratingBarActived">#ffbf41</color>
+    <color name="ratingBarNotActived">#ffde9d</color>
+</resources>

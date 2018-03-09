@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/dashboard"
+            android:icon="@drawable/ic_home_black_24dp"
+            android:title="Dashboard" />
+        <item
+            android:id="@+id/kelola_produk"
+            android:icon="@drawable/ic_store_black_24dp"
+            android:title="Kelola Produk" />
+        <item
+            android:id="@+id/kelola_penjualan"
+            android:icon="@drawable/ic_assignment_black_24dp"
+            android:title="Kelola Penjualan" />
+        <item
+            android:id="@+id/info_harga"
+            android:icon="@drawable/ic_show_chart_black_24dp"
+            android:title="Informasi Harga" />
+        <item
+            android:id="@+id/obrolan"
+            android:icon="@drawable/ic_message_black_24dp"
+            android:title="Daftar Obrolan" />
+        <item
+            android:id="@+id/ulasan"
+            android:icon="@drawable/ic_rate_review_black_24dp"
+            android:title="Ulasan"></item>
+        <item
+            android:id="@+id/pengaturan"
+            android:icon="@drawable/ic_settings_black_24dp"
+            android:title="Pengaturan" />
+
+        <item
+            android:id="@+id/bantuan"
+            android:icon="@drawable/ic_help_black_24dp"
+            android:title="Bantuan"/>
+
+        <item
+            android:id="@+id/signout"
+            android:icon="@drawable/menu_logout"
+            android:title="Keluar"/>
+
+    </group>
+
+</menu>
