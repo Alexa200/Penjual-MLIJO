@@ -70,7 +70,7 @@ public class DaftarObrolanAdapter extends RecyclerView.Adapter<DaftarObrolanAdap
                             @Override
                             public void onClick(View v) {
                                 Intent intent = new Intent(activity, ObrolanActivity.class);
-                                intent.putExtra(Constants.ID_PENJUAL, konsumenModel.getUid());
+                                intent.putExtra(Constants.ID_KONSUMEN, konsumenModel.getUid());
                                 intent.putExtra(Constants.AVATAR, konsumenModel.getDetailKonsumen().get(Constants.AVATAR).toString());
                                 intent.putExtra(Constants.NAMA, konsumenModel.getDetailKonsumen().get(Constants.NAMA).toString());
                                 activity.startActivity(intent);

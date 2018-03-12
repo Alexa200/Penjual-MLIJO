@@ -63,6 +63,7 @@ public class Constants {
     public static final String ID_PRODUK ="idProduk";
     public static final String DESKRIPSI ="deskripsiProduk";
     public static final String WAKTU_DIBUAT ="waktuDibuat";
+    public static final String ID_LOKASI ="idLokasi";
     //Pesan Produk
     public static final String PENJUALAN = "penjualan";
     public static final String PENJUALAN_BARU = "penjualanBaru";
@@ -127,7 +128,9 @@ public class Constants {
             Manifest.permission.CAMERA,
             Manifest.permission.WRITE_EXTERNAL_STORAGE
     };
-
     public static int RESULT_LOAD_IMAGE = 1;
+    // Used in checking for runtime permissions.
+    public static final int REQUEST_PERMISSIONS_REQUEST_CODE = 34;
+//    private static final int REQUEST_CODE_READ_EXTERNAL_STORAGE = 1001;
 
 }

@@ -36,6 +36,7 @@ import com.mlijo.aryaym.penjual_mlijo.Base.InternetConnection;
 import com.mlijo.aryaym.penjual_mlijo.DBModel.PenjualModel;
 import com.mlijo.aryaym.penjual_mlijo.Dashboard.DashboardFragment;
 import com.mlijo.aryaym.penjual_mlijo.KelolaPenjualan.KelolaPenjualanFragment;
+import com.mlijo.aryaym.penjual_mlijo.KelolaProduk.KelolaProdukFragment;
 import com.mlijo.aryaym.penjual_mlijo.Obrolan.DaftarObrolanFragment;
 import com.mlijo.aryaym.penjual_mlijo.Pengaturan.PengaturanFragment;
 import com.mlijo.aryaym.penjual_mlijo.Pengaturan.ProfilFragment;
@@ -205,11 +206,11 @@ public class MainActivity extends AppCompatActivity
                 DashboardFragment dashboardFragment = new DashboardFragment();
                 transaction.replace(R.id.main_fragment_container, dashboardFragment).commit();
                 break;
-//            case R.id.kelola_produk:
-//                KelolaProdukFragment kelolaProdukFragment = new KelolaProdukFragment();
-//                transaction.addToBackStack(KelolaProdukFragment.class.getName());
-//                transaction.replace(R.id.main_fragment_container, kelolaProdukFragment).commit();
-//                break;
+            case R.id.kelola_produk:
+                KelolaProdukFragment kelolaProdukFragment = new KelolaProdukFragment();
+                transaction.addToBackStack(KelolaProdukFragment.class.getName());
+                transaction.replace(R.id.main_fragment_container, kelolaProdukFragment).commit();
+                break;
             case R.id.kelola_penjualan:
                 KelolaPenjualanFragment kelolaPenjualanFragment = new KelolaPenjualanFragment();
                 transaction.addToBackStack(KelolaPenjualanFragment.class.getName());

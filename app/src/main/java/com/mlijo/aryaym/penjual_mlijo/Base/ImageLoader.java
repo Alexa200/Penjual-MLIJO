@@ -1,6 +1,7 @@
 package com.mlijo.aryaym.penjual_mlijo.Base;
 
 import android.app.Activity;
+import android.content.Context;
 import android.util.Log;
 import android.widget.ImageView;
 
@@ -51,6 +52,17 @@ public class ImageLoader {
                     .diskCacheStrategy(DiskCacheStrategy.ALL)
                     .placeholder(R.drawable.no_image)
                     .centerCrop()
+                    .into(imageView);
+        } catch (Exception e) {
+            Log.d(TAG, e.getMessage());
+        }
+    }
+
+    public void loadImageProduk(final Context context, final String url, final ImageView imageView) {
+
+        try {
+            Glide.with(context)
+                    .load(url)
                     .into(imageView);
         } catch (Exception e) {
             Log.d(TAG, e.getMessage());

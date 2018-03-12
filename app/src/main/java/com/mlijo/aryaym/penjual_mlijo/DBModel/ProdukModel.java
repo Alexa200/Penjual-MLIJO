@@ -9,13 +9,39 @@ import java.util.ArrayList;
 
 public class ProdukModel implements Serializable {
 
-    String userId, namaProduk, idKategori,  digitSatuan, namaSatuan, deskripsiProduk;
+    String userId, namaProduk, idKategori, namaSatuan, deskripsiProduk, idLokasi;
     String idProduk;
     Double hargaProduk;
+    int digitSatuan;
     ArrayList<String> gambarProduk = new ArrayList<>();
-
+    Long waktuDibuat;
 
     public ProdukModel(){}
+
+
+    public ProdukModel(String penjualId, long timestamp, String namaProduk, String idKategori,
+                       double hargaProduk, int satuanProduk, String namaSatuan, String idLokasi,
+                       String deskripsiProduk){
+        this.userId = penjualId;
+        this.namaProduk = namaProduk;
+        this.idKategori = idKategori;
+        this.namaSatuan = namaSatuan;
+        this.deskripsiProduk = deskripsiProduk;
+        this.hargaProduk = hargaProduk;
+        this.digitSatuan = satuanProduk;
+        this.idLokasi = idLokasi;
+        this.waktuDibuat = timestamp;
+    }
+
+    public ProdukModel(long timestamp, String namaProduk, double hargaProduk, int satuanProduk, String namaSatuan,
+                       String deskripsiProduk){
+        this.namaProduk = namaProduk;
+        this.namaSatuan = namaSatuan;
+        this.deskripsiProduk = deskripsiProduk;
+        this.hargaProduk = hargaProduk;
+        this.digitSatuan = satuanProduk;
+        this.waktuDibuat = timestamp;
+    }
 
     public String getUid() {
         return userId;
@@ -33,7 +59,7 @@ public class ProdukModel implements Serializable {
         return hargaProduk;
     }
 
-    public String getSatuanProduk() {
+    public int getSatuanProduk() {
         return digitSatuan;
     }
 
@@ -53,4 +79,11 @@ public class ProdukModel implements Serializable {
         return gambarProduk;
     }
 
+    public Long getWaktuDibuat() {
+        return waktuDibuat;
+    }
+
+    public String getIdLokasi() {
+        return idLokasi;
+    }
 }

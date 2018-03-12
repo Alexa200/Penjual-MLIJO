@@ -42,6 +42,15 @@
             android:label="@string/title_activity_dashboard"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
+            android:name=".KelolaProduk.BuatProdukActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".KelolaProduk.DetailProdukActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".KelolaProduk.UbahProdukActivity"
+            android:screenOrientation="portrait"/>
+        <activity
             android:name=".KelolaPenjualan.DaftarTransaksiActivity"
             android:screenOrientation="portrait"/>
         <activity
@@ -63,6 +72,13 @@
             android:name=".Pengaturan.PengaturanProfilActivity"
             android:screenOrientation="portrait"/>
         <activity
+            android:name=".Pengaturan.KelolaLokasiActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.gun0912.tedpicker.ImagePickerActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
             android:name="com.thefinestartist.finestwebview.FinestWebViewActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:screenOrientation="sensor"
@@ -70,6 +86,10 @@
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key" />
+        <service
+            android:name=".Pengaturan.Service.LocationUpdatesService"
+            android:enabled="true"
+            android:exported="true" />
     </application>
 
 </manifest>
