@@ -33,24 +33,8 @@ public class ProdukPresenter {
 
     public void buatProdukBaru(final ProdukModel produkModel, ArrayList<Uri> imageUri){
         final String pushId = mFirestore.collection(Constants.PRODUK_REGULER).document().getId();
-        buatProduk(produkModel, pushId);
-        UploadPhotoThreadListener uploadPhotoThreadListener = new UploadPhotoThreadListener() {
-            @Override
-            public void onUploadPhotoSuccess(ArrayList<String> photoUrls) {
-                Map<String, Object> gambarProduk = new HashMap<>();
-                gambarProduk.put(Constants.GAMBARPRODUK, photoUrls);
-
-                mFirestore.collection(Constants.PRODUK_REGULER).document(pushId).update(gambarProduk);
-
-                view.hideProgressDialog();
-                view.finish();
-                Toast.makeText(view.getApplicationContext(), "Produk anda telah tersimpan", Toast.LENGTH_SHORT).show();
-            }
-        };
-        new UploadPhotoThread(pushId, imageUri, uploadPhotoThreadListener).execute();
-    }
-
-    public void buatProduk(ProdukModel produkModel, String produkId){
+        //buatProduk(produkModel, pushId);
+        String produkId = pushId;
         HashMap<String, Object> dataProduk = new HashMap<>();
         dataProduk.put(Constants.ID_PENJUAL, produkModel.getUid());
         dataProduk.put(Constants.WAKTU_DIBUAT, produkModel.getWaktuDibuat());
@@ -65,6 +49,21 @@ public class ProdukPresenter {
         dataProduk.put(Constants.DESKRIPSI, produkModel.getDeskripsiProduk());
 
         mFirestore.collection(Constants.PRODUK_REGULER).document(produkId).set(dataProduk);
+
+        UploadPhotoThreadListener uploadPhotoThreadListener = new UploadPhotoThreadListener() {
+            @Override
+            public void onUploadPhotoSuccess(ArrayList<String> photoUrls) {
+                Map<String, Object> gambarProduk = new HashMap<>();
+                gambarProduk.put(Constants.GAMBARPRODUK, photoUrls);
+
+                mFirestore.collection(Constants.PRODUK_REGULER).document(pushId).update(gambarProduk);
+
+                view.hideProgressDialog();
+                view.finish();
+                Toast.makeText(view.getApplicationContext(), "Produk anda telah tersimpan", Toast.LENGTH_SHORT).show();
+            }
+        };
+        new UploadPhotoThread(pushId, imageUri, uploadPhotoThreadListener).execute();
     }
 
     public void perbaruiProduk(ProdukModel produkModel, String produkId){

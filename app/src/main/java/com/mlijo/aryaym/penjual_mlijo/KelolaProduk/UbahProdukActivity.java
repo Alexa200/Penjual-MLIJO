@@ -143,7 +143,7 @@ public class UbahProdukActivity extends BaseActivity implements
         try {
             setTitle("Ubah produk  " + produkModel.getNamaProduk());
             inputNamaProduk.setText(produkModel.getNamaProduk());
-            inputHargaProduk.setText(rupiah().format(produkModel.getHargaProduk()));
+            inputHargaProduk.setText(String.valueOf(produkModel.getHargaProduk()));
             inputDeskripsiProduk.setText(produkModel.getDeskripsiProduk());
             if (produkModel.getGambarProduk().size() > 0) {
                 imgProduk.setVisibility(View.GONE);

@@ -257,36 +257,41 @@ public class BuatProdukActivity extends BaseActivity implements View.OnClickList
         return hasil;
     }
 
-    private void buatProdukBaru() {
-        namaProduk = inputNamaProduk.getText().toString();
-        hargaProduk = Double.valueOf(inputHargaProduk.getText().toString());
-        satuanProduk = Integer.parseInt(inputNominalSatuan.getText().toString());
-        deskripsiProduk = inputDeskripsiProduk.getText().toString();
-        long waktuDibuat = new Date().getTime();
-        Log.d("nilai harga", "" + hargaProduk);
-        if (InternetConnection.getInstance().isOnline(BuatProdukActivity.this)) {
-            try {
-                //String statusTambahProduk = "tambah produk berhasil";
-                if (listImage.size() == 0) {
-                    ShowAlertDialog.showAlert("Anda harus memilih gambar produk minimal (1)!", this);
-                } else {
-                    showProgessDialog();
-                    ProdukModel produkModel = new ProdukModel(getUid(), waktuDibuat, namaProduk, kategoriProduk,
-                            hargaProduk, satuanProduk, namaSatuan, namaAreaPenjual, deskripsiProduk);
-                    produkPresenter.buatProdukBaru(produkModel, listImage);
+    private void simpanProduk(){
+
+        if (cekKolomIsian() == true) {
+            namaProduk = inputNamaProduk.getText().toString();
+            hargaProduk = Double.valueOf(inputHargaProduk.getText().toString());
+            satuanProduk = Integer.parseInt(inputNominalSatuan.getText().toString());
+            deskripsiProduk = inputDeskripsiProduk.getText().toString();
+            long waktuDibuat = new Date().getTime();
+            Log.d("nilai harga", "" + hargaProduk);
+            if (InternetConnection.getInstance().isOnline(BuatProdukActivity.this)) {
+                try {
+                    //String statusTambahProduk = "tambah produk berhasil";
+                    if (listImage.size() == 0) {
+                        ShowAlertDialog.showAlert("Anda harus memilih gambar produk minimal (1)!", this);
+                    } else {
+                        showProgessDialog();
+                        ProdukModel produkModel = new ProdukModel(getUid(), waktuDibuat, namaProduk, kategoriProduk,
+                                hargaProduk, satuanProduk, namaSatuan, namaAreaPenjual, deskripsiProduk);
+                        produkPresenter.buatProdukBaru(produkModel, listImage);
+                    }
+                } catch (Exception e) {
+                    ShowSnackbar.showSnack(this, getResources().getString(R.string.msg_error));
                 }
-            } catch (Exception e) {
-                ShowSnackbar.showSnack(this, getResources().getString(R.string.msg_error));
+            } else {
+                final Snackbar snackbar = Snackbar.make(activity, getResources().getString(R.string.msg_noInternet), Snackbar.LENGTH_INDEFINITE);
+                snackbar.setAction(getResources().getString(R.string.ok), new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        snackbar.dismiss();
+                    }
+                });
+                snackbar.show();
             }
         } else {
-            final Snackbar snackbar = Snackbar.make(activity, getResources().getString(R.string.msg_noInternet), Snackbar.LENGTH_INDEFINITE);
-            snackbar.setAction(getResources().getString(R.string.ok), new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    snackbar.dismiss();
-                }
-            });
-            snackbar.show();
+            ShowAlertDialog.showAlert("Anda harus mengisi semua Form yang tersedia !", this);
         }
     }
 
@@ -298,11 +303,7 @@ public class BuatProdukActivity extends BaseActivity implements View.OnClickList
                 addPhoto();
             }
         } else if (view == btnSimpan) {
-            if (cekKolomIsian() == true) {
-                buatProdukBaru();
-            } else {
-                ShowAlertDialog.showAlert("Anda harus mengisi semua Form yang tersedia !", this);
-            }
+                simpanProduk();
         }
     }
 }
