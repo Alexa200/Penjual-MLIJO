@@ -73,7 +73,7 @@ public class KelolaProdukAdapter extends FirestoreAdapter<KelolaProdukAdapter.Da
 
             txtNamaProduk.setText(produkModel.getNamaProduk());
             txtNamaKategori.setText(produkModel.getKategoriProduk());
-            txtHargaProduk.setText("Rp." + BaseActivity.rupiah().format(produkModel.getHargaProduk()));
+            txtHargaProduk.setText("Rp  " + BaseActivity.rupiah().format(produkModel.getHargaProduk()));
             if (produkModel.getGambarProduk() != null){
                 ImageLoader.getInstance().loadImageProduk(imgIconProduk.getContext(), produkModel.getGambarProduk().get(0), imgIconProduk);
             }

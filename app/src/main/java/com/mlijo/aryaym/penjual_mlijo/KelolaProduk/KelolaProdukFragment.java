@@ -13,6 +13,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -44,8 +45,8 @@ public class KelolaProdukFragment extends Fragment implements
     RecyclerView mRecycler;
     @BindView(R.id.fab_new_produk)
     FloatingActionButton fabNewProduk;
-//    @BindView(R.id.progress_bar)
-//    ProgressBar progressBar;
+    @BindView(R.id.progress_bar)
+    ProgressBar progressBar;
     @BindView(R.id.img_no_result)
     ImageView imgNoResult;
    // Unbinder unbinder;
@@ -75,8 +76,8 @@ public class KelolaProdukFragment extends Fragment implements
         FirebaseFirestore.setLoggingEnabled(true);
         mFirestore = FirebaseFirestore.getInstance();
         produkQuery = mFirestore.collection(Constants.PRODUK_REGULER)
-                .whereEqualTo(Constants.ID_PENJUAL, BaseActivity.getUid())
-                .orderBy("waktuDibuat", Query.Direction.ASCENDING) // sek error
+                //.whereEqualTo(Constants.ID_PENJUAL, BaseActivity.getUid())
+                .orderBy("waktuDibuat", Query.Direction.DESCENDING) // sek error
                 .limit(20);
 
         kelolaProdukAdapter = new KelolaProdukAdapter(produkQuery, this){
@@ -91,6 +92,7 @@ public class KelolaProdukFragment extends Fragment implements
                 }
             }
         };
+        defaultDataFilter();
 
         customLinearLayoutManager = new MyLinearLayoutManager(getActivity());
         mRecycler.setLayoutManager(customLinearLayoutManager);
@@ -100,14 +102,14 @@ public class KelolaProdukFragment extends Fragment implements
     }
 
     private void showItemData() {
-        //progressBar.setVisibility(View.GONE);
+        progressBar.setVisibility(View.GONE);
         mRecycler.setVisibility(View.VISIBLE);
         imgNoResult.setVisibility(View.GONE);
     }
 
     public void noItemData(){
         imgNoResult.setVisibility(View.VISIBLE);
-        //progressBar.setVisibility(View.GONE);
+        progressBar.setVisibility(View.GONE);
         mRecycler.setVisibility(View.GONE);
     }
 
@@ -148,6 +150,10 @@ public class KelolaProdukFragment extends Fragment implements
             Intent intent = new Intent(KelolaProdukFragment.this.getActivity(), BuatProdukActivity.class);
             startActivity(intent);
         }
+    }
+
+    private void defaultDataFilter(){
+        FilterProduk.getDefault(penjualId);
     }
 
     @Override
