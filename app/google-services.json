@@ -8,61 +8,17 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:669127537700:android:ab396afc18b67a3d",
+        "mobilesdk_app_id": "1:669127537700:android:c1fce32ed2f49eeb",
         "android_client_info": {
-          "package_name": "com.example.aryaym.mlijokonsumen"
+          "package_name": "com.mlijo.aryaym.konsumen_mlijo"
         }
       },
       "oauth_client": [
         {
-          "client_id": "669127537700-134jbftkaanjr2recdh3addcu6ih3jlt.apps.googleusercontent.com",
+          "client_id": "669127537700-siefgun0s4ju5plm1ut4hu2u1gcu0ij5.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.example.aryaym.mlijokonsumen",
-            "certificate_hash": "e24aee543ad712632d44166a6fdebaa11c6dcc00"
-          }
-        },
-        {
-          "client_id": "669127537700-59f7ccmp8eekpr7ok78a16lb24mvvdsl.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyDCKlejroXSs_2cyu_Izla97Nf4y3HnEBc"
-        }
-      ],
-      "services": {
-        "analytics_service": {
-          "status": 1
-        },
-        "appinvite_service": {
-          "status": 2,
-          "other_platform_oauth_client": [
-            {
-              "client_id": "669127537700-59f7ccmp8eekpr7ok78a16lb24mvvdsl.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
-        },
-        "ads_service": {
-          "status": 2
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:669127537700:android:1c79edfae09a24fd",
-        "android_client_info": {
-          "package_name": "com.example.aryaym.mlijopenjual"
-        }
-      },
-      "oauth_client": [
-        {
-          "client_id": "669127537700-0jsg1n2smmubclc331m32s9rvhj43jl0.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.example.aryaym.mlijopenjual",
+            "package_name": "com.mlijo.aryaym.konsumen_mlijo",
             "certificate_hash": "e24aee543ad712632d44166a6fdebaa11c6dcc00"
           }
         },

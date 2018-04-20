@@ -1,3 +1,6 @@
+plugins {
+    id 'com.onesignal.androidsdk.onesignal-gradle-plugin' version '0.8.1'
+}
 apply plugin: 'com.android.application'
 
 android {
@@ -9,6 +12,9 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        manifestPlaceholders = [onesignal_app_id: "eed14716-bf93-456a-9833-203325aad307",
+                                // Project number pulled from dashboard, local value is ignored.
+                                onesignal_google_project_number: "REMOTE"]
     }
     buildTypes {
         release {
@@ -21,6 +27,7 @@ android {
 repositories {
     maven { url "https://s3.amazonaws.com/repo.commonsware.com" }
     maven { url "https://jitpack.io" }
+    maven { url 'https://maven.google.com' }
 
     google()
 }
@@ -41,7 +48,8 @@ dependencies {
     implementation 'com.firebase:geofire-android:2.1.2'
     //google
     implementation 'com.google.android.gms:play-services-location:11.8.0'
-    implementation 'com.google.android.gms:play-services:11.8.0'
+    implementation 'com.google.android.gms:play-services-maps:11.8.0'
+    //implementation 'com.google.android.gms:play-services:11.8.0'
     //butterknife
     implementation 'com.jakewharton:butterknife:8.8.1'
     //ImagePickerGallery
@@ -59,6 +67,7 @@ dependencies {
     implementation 'com.thefinestartist:finestwebview:1.2.7'
     //country code
     implementation 'com.github.joielechong:countrycodepicker:2.1.5'
+    implementation 'com.onesignal:OneSignal:[3.8.3, 3.99.99]'
 
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.1'
@@ -66,3 +75,4 @@ dependencies {
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
 }
 apply plugin: 'com.google.gms.google-services'
+apply plugin: 'com.onesignal.androidsdk.onesignal-gradle-plugin'

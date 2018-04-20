@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -58,15 +59,16 @@ public class KelolaPenjualanFragment extends Fragment implements ValueEventListe
     public void onStart() {
         super.onStart();
 
-        mDatabase.child(Constants.PENJUAL).child(BaseActivity.getUid()).child(Constants.PENJUALAN).addValueEventListener(this);
+        mDatabase.child(Constants.PENJUAL).child(BaseActivity.getUid()).child(Constants.DAFTAR_TRANSAKSI).addValueEventListener(this);
     }
 
     @Override
     public void onDataChange(DataSnapshot dataSnapshot) {
         if (dataSnapshot != null) {
+            Log.d("nilai transaksi", ""+ dataSnapshot.getValue());
             try {
-                long newOrder = dataSnapshot.child(Constants.PENJUALAN_BARU).getChildrenCount();
-                long statusOrder = dataSnapshot.child(Constants.STATUS_PENGIRIMAN).getChildrenCount();
+                long newOrder = dataSnapshot.child(Constants.TRANSAKSI_BARU).getChildrenCount();
+                long statusOrder = dataSnapshot.child(Constants.STATUS_TRANSAKSI).getChildrenCount();
                 long historyOrder = dataSnapshot.child(Constants.RIWAYAT_TRANSAKSI).getChildrenCount();
                 jmlPembelianBaru.setText(Long.toString(newOrder));
                 jmlStatusPembelian.setText(Long.toString(statusOrder));
@@ -86,7 +88,7 @@ public class KelolaPenjualanFragment extends Fragment implements ValueEventListe
     public void onPesananBaruClicked() {
         Intent intent = new Intent(KelolaPenjualanFragment.this.getActivity(), DaftarTransaksiActivity.class);
         intent.putExtra(Constants.TITLE, "Pesanan Baru");
-        intent.putExtra(Constants.TRANSAKSI, Constants.PENJUALAN_BARU);
+        intent.putExtra(Constants.TRANSAKSI, Constants.TRANSAKSI_BARU);
         startActivity(intent);
     }
 
@@ -94,7 +96,7 @@ public class KelolaPenjualanFragment extends Fragment implements ValueEventListe
     public void onStatusPenjualanClicked() {
         Intent intent = new Intent(KelolaPenjualanFragment.this.getActivity(), DaftarTransaksiActivity.class);
         intent.putExtra(Constants.TITLE, "Status Penjualan");
-        intent.putExtra(Constants.TRANSAKSI, Constants.STATUS_PENGIRIMAN);
+        intent.putExtra(Constants.TRANSAKSI, Constants.STATUS_TRANSAKSI);
         startActivity(intent);
     }
 

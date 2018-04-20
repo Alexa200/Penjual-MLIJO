@@ -65,10 +65,12 @@ public class Constants {
     public static final String WAKTU_DIBUAT ="waktuDibuat";
     public static final String ID_LOKASI ="idLokasi";
     //Pesan Produk
-    public static final String PENJUALAN = "penjualan";
-    public static final String PENJUALAN_BARU = "penjualanBaru";
-    public static final String STATUS_PENGIRIMAN = "statusPengiriman";
-    public static final String PEMBELIAN = "pembelian";
+    public static final String PENJUALAN = "penjualan";//rename jadi daftarTransaksi
+    public static final String DAFTAR_TRANSAKSI = "daftarTransaksi";
+    public static final String PENJUALAN_BARU = "penjualanBaru";//rename transaksi baru
+    public static final String TRANSAKSI_BARU = "transaksiBaru";
+    public static final String STATUS_PENGIRIMAN = "statusPengiriman";//rename status transaksi
+    public static final String PEMBELIAN = "pembelian";//rename daftar transaksi
     public static final String PEMBELIAN_BARU = "pembelianBaru";
     public static final String STATUS_PEMBELIAN = "statusPembelian";
     public static final String TRANSAKSI_COUNT = "jumlahTransaksi";

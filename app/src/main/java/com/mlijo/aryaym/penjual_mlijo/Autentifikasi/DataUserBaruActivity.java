@@ -81,11 +81,11 @@ public class DataUserBaruActivity extends BaseActivity implements View.OnClickLi
         String dataTelpon = inputTelepon.getText().toString();
 
         buatDataUser(dataNIK, dataNama, dataAlamat, dataTelpon);
-        defaultDataUser();
+       // defaultDataUser();
     }
 
     private void buatDataUser(String NIK, String Nama, String Alamat, String Telpon){
-        //DocumentReference documentReference = mDatabase.collection(Constants.PENJUAL).document(getUid());
+
         Map<String, Object> detailPenjualData = new HashMap<>();
         detailPenjualData.put(Constants.NIK, NIK);
         detailPenjualData.put(Constants.NAMA, Nama);
@@ -93,18 +93,7 @@ public class DataUserBaruActivity extends BaseActivity implements View.OnClickLi
         detailPenjualData.put(Constants.ALAMAT, Alamat);
         detailPenjualData.put(Constants.TELPON, Telpon);
 
-        //documentReference.collection(Constants.DETAIL_PENJUAL).add(detailPenjualData);
+        mDatabase.child(Constants.PENJUAL).child(getUid()).child(Constants.UID).setValue(getUid());
         mDatabase.child(Constants.PENJUAL).child(getUid()).child(Constants.DETAIL_PENJUAL).setValue(detailPenjualData);
-    }
-
-    private void defaultDataUser(){
-        //DocumentReference documentReference = mDatabase.collection(Constants.PENJUAL).document(getUid());
-        Map<String, Object> defaultPenjualData = new HashMap<>();
-        defaultPenjualData.put(Constants.STATUS_BERJUALAN, false);
-        defaultPenjualData.put(Constants.STATUS_LOKASI, false);
-        defaultPenjualData.put(Constants.UID, getUid());
-
-        //documentReference.set(defaultPenjualData);
-        mDatabase.child(Constants.PENJUAL).child(getUid()).setValue(defaultPenjualData);
     }
 }

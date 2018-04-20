@@ -57,7 +57,7 @@ public class KelolaProdukFragment extends Fragment implements
     private DatabaseReference mDatabase;
     private FirebaseFirestore mFirestore;
     private Query produkQuery;
-    private List<ProdukModel> produkList = new ArrayList<>();
+    //private List<ProdukModel> produkList = new ArrayList<>();
     //private Que
    // private List<PostRefModel> postRefModels = new ArrayList<>();
     private KelolaProdukAdapter kelolaProdukAdapter;
@@ -76,7 +76,7 @@ public class KelolaProdukFragment extends Fragment implements
         FirebaseFirestore.setLoggingEnabled(true);
         mFirestore = FirebaseFirestore.getInstance();
         produkQuery = mFirestore.collection(Constants.PRODUK_REGULER)
-                //.whereEqualTo(Constants.ID_PENJUAL, BaseActivity.getUid())
+                .whereEqualTo(Constants.ID_PENJUAL, BaseActivity.getUid())
                 .orderBy("waktuDibuat", Query.Direction.DESCENDING) // sek error
                 .limit(20);
 
@@ -187,6 +187,7 @@ public class KelolaProdukFragment extends Fragment implements
                                             @Override
                                             public void onSuccess(Void aVoid) {
                                                 Toast.makeText(rootView.getContext(), "Produk berhasil di hapus", Toast.LENGTH_SHORT).show();
+
                                             }
                                         });
                                     }
