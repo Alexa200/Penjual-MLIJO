@@ -12,7 +12,6 @@ import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.Query;
 import com.mlijo.aryaym.penjual_mlijo.Base.BaseActivity;
 import com.mlijo.aryaym.penjual_mlijo.Base.ImageLoader;
-import com.mlijo.aryaym.penjual_mlijo.DBModel.ProdukModel;
 import com.mlijo.aryaym.penjual_mlijo.FirestoreAdapter;
 import com.mlijo.aryaym.penjual_mlijo.R;
 

@@ -39,18 +39,11 @@ import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 import com.mlijo.aryaym.penjual_mlijo.Base.BaseActivity;
 import com.mlijo.aryaym.penjual_mlijo.Base.InternetConnection;
-import com.mlijo.aryaym.penjual_mlijo.DBModel.ObrolanModel;
-import com.mlijo.aryaym.penjual_mlijo.DBModel.ObrolanTerakhirModel;
-import com.mlijo.aryaym.penjual_mlijo.DBModel.PenjualModel;
+import com.mlijo.aryaym.penjual_mlijo.Pengaturan.PenjualModel;
 import com.mlijo.aryaym.penjual_mlijo.R;
 import com.mlijo.aryaym.penjual_mlijo.Utils.Constants;
 import com.mlijo.aryaym.penjual_mlijo.Utils.EncodeImage;
 import com.mlijo.aryaym.penjual_mlijo.Utils.ShowSnackbar;
-import com.onesignal.OSPermissionSubscriptionState;
-import com.onesignal.OneSignal;
-
-import org.json.JSONException;
-import org.json.JSONObject;
 
 import java.io.OutputStream;
 import java.net.HttpURLConnection;

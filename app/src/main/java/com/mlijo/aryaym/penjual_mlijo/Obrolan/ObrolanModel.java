@@ -1,4 +1,4 @@
-package com.mlijo.aryaym.penjual_mlijo.DBModel;
+package com.mlijo.aryaym.penjual_mlijo.Obrolan;
 
 import com.mlijo.aryaym.penjual_mlijo.Utils.Constants;
 

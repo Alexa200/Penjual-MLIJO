@@ -1,4 +1,4 @@
-package com.mlijo.aryaym.penjual_mlijo.DBModel;
+package com.mlijo.aryaym.penjual_mlijo.Pengaturan;
 
 import java.io.Serializable;
 import java.util.HashMap;

@@ -9,7 +9,6 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
-import com.mlijo.aryaym.penjual_mlijo.DBModel.TransaksiModel;
 import com.mlijo.aryaym.penjual_mlijo.Utils.Constants;
 
 import java.util.ArrayList;

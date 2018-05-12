@@ -31,7 +31,6 @@ import com.google.firebase.storage.UploadTask;
 import com.mlijo.aryaym.penjual_mlijo.Base.BaseActivity;
 import com.mlijo.aryaym.penjual_mlijo.Base.ImageLoader;
 import com.mlijo.aryaym.penjual_mlijo.Base.InternetConnection;
-import com.mlijo.aryaym.penjual_mlijo.DBModel.PenjualModel;
 import com.mlijo.aryaym.penjual_mlijo.R;
 import com.mlijo.aryaym.penjual_mlijo.Utils.Constants;
 import com.mlijo.aryaym.penjual_mlijo.Utils.EncodeImage;

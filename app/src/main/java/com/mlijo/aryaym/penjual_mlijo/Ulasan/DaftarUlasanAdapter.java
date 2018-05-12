@@ -9,9 +9,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.mlijo.aryaym.penjual_mlijo.Base.ImageLoader;
-import com.mlijo.aryaym.penjual_mlijo.DBModel.KonsumenModel;
-import com.mlijo.aryaym.penjual_mlijo.DBModel.ProdukModel;
-import com.mlijo.aryaym.penjual_mlijo.DBModel.UlasanModel;
+import com.mlijo.aryaym.penjual_mlijo.InformasiKonsumen.KonsumenModel;
+import com.mlijo.aryaym.penjual_mlijo.KelolaProduk.ProdukModel;
 import com.mlijo.aryaym.penjual_mlijo.R;
 import com.mlijo.aryaym.penjual_mlijo.Utils.Constants;
 import com.mlijo.aryaym.penjual_mlijo.Utils.DateFormatter;

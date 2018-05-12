@@ -23,13 +23,9 @@ import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.Query;
 import com.mlijo.aryaym.penjual_mlijo.Base.BaseActivity;
-import com.mlijo.aryaym.penjual_mlijo.DBModel.ProdukModel;
 import com.mlijo.aryaym.penjual_mlijo.R;
 import com.mlijo.aryaym.penjual_mlijo.Utils.Constants;
 import com.mlijo.aryaym.penjual_mlijo.Utils.MyLinearLayoutManager;
-
-import java.util.ArrayList;
-import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;

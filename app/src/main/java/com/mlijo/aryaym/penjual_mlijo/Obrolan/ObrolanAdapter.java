@@ -3,7 +3,6 @@ package com.mlijo.aryaym.penjual_mlijo.Obrolan;
 import android.app.Activity;
 import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
@@ -11,7 +10,6 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.mlijo.aryaym.penjual_mlijo.Base.ImageLoader;
-import com.mlijo.aryaym.penjual_mlijo.DBModel.ObrolanModel;
 import com.mlijo.aryaym.penjual_mlijo.R;
 import com.mlijo.aryaym.penjual_mlijo.Utils.Constants;
 import com.nostra13.universalimageloader.cache.memory.impl.WeakMemoryCache;
@@ -60,10 +58,10 @@ public class ObrolanAdapter extends RecyclerView.Adapter<ObrolanAdapter.ObrolanV
         }else {
             tampilkanPesanPenerima(holder, obrolanModel, position);
         }
-        Log.d("pemilik konten", ""+obrolanModel.isKontenPengirim());
-        Log.d("id penerima", ""+obrolanModel.getIdPenerima());
-        Log.d("id pengirim", ""+obrolanModel.getIdPengirim());
-        Log.d("isi konten", ""+obrolanModel.getKonten());
+//        Log.d("pemilik konten", ""+obrolanModel.isKontenPengirim());
+//        Log.d("id penerima", ""+obrolanModel.getIdPenerima());
+//        Log.d("id pengirim", ""+obrolanModel.getIdPengirim());
+//        Log.d("isi konten", ""+obrolanModel.getKonten());
     }
 
     private void tampilkanPesanPenerima(ObrolanViewHolder holder, ObrolanModel obrolanModel, int position) {

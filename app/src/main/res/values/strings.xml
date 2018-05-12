@@ -223,6 +223,7 @@
     <string name="title_activity_obrolan">Daftar Obrolan</string>
     <string name="lbl_nama_konsumen">Nama Konsumen</string>
     <!-- Pesan -->
+    <string name="tolakOrder">Apakah anda yakin akan membatalkan pesanan?</string>
     <!-- Kelola Penjualan Produk -->
 
     <!-- Ulasan -->

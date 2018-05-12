@@ -1,4 +1,4 @@
-package com.mlijo.aryaym.penjual_mlijo.DBModel;
+package com.mlijo.aryaym.penjual_mlijo.KelolaPenjualan;
 
 import java.io.Serializable;
 

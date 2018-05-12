@@ -5,6 +5,7 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,6 +19,7 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
+import com.google.firebase.database.ValueEventListener;
 import com.mlijo.aryaym.penjual_mlijo.Base.BaseActivity;
 import com.mlijo.aryaym.penjual_mlijo.Base.InternetConnection;
 import com.mlijo.aryaym.penjual_mlijo.R;
@@ -35,7 +37,7 @@ import butterknife.Unbinder;
  * Created by AryaYM on 24/10/2017.
  */
 
-public class DaftarObrolanFragment extends Fragment implements ChildEventListener{
+public class DaftarObrolanFragment extends Fragment implements ChildEventListener, ValueEventListener{
 
     @BindView(R.id.progress_bar)
     ProgressBar progressBar;
@@ -57,17 +59,6 @@ public class DaftarObrolanFragment extends Fragment implements ChildEventListene
         mDatabase = FirebaseDatabase.getInstance().getReference();
         listUid = new ArrayList<>();
         daftarObrolanAdapter = new DaftarObrolanAdapter(getActivity(), listUid);
-        if (FirebaseAuth.getInstance().getCurrentUser() != null) {
-            if (InternetConnection.getInstance().isOnline(getActivity())) {
-                getSemueObrolan().addChildEventListener(this);
-            } else {
-                progressBar.setVisibility(View.GONE);
-            }
-        } else {
-            ShowAlertDialog.showAlert(getActivity().getResources().getString(R.string.msg_retry), getActivity());
-            progressBar.setVisibility(View.GONE);
-            mRecycler.setVisibility(View.VISIBLE);
-        }
         mRecycler.setLayoutManager(new LinearLayoutManager(getActivity()));
         mRecycler.setAdapter(daftarObrolanAdapter);
         unbinder = ButterKnife.bind(this, view);
@@ -81,6 +72,20 @@ public class DaftarObrolanFragment extends Fragment implements ChildEventListene
 
     private Query getSemueObrolan() {
         return mDatabase.child(Constants.PENJUAL).child(BaseActivity.getUid()).child(Constants.OBROLAN).orderByChild(Constants.TIMESTAMP);
+    }
+
+    @Override
+    public void onStart(){
+        super.onStart();
+        if (InternetConnection.getInstance().isOnline(getActivity())) {
+            getSemueObrolan().addChildEventListener(this);
+            getSemueObrolan().addValueEventListener(this);
+            progressBar.setVisibility(View.GONE);
+        } else {
+            ShowAlertDialog.showAlert(getActivity().getResources().getString(R.string.msg_retry), getActivity());
+            progressBar.setVisibility(View.GONE);
+
+        }
     }
 
     @Override
@@ -121,10 +126,24 @@ public class DaftarObrolanFragment extends Fragment implements ChildEventListene
     }
 
     @Override
+    public void onDataChange(DataSnapshot dataSnapshot) {
+        try {
+            Log.d("nilai obrol", ""+dataSnapshot.getValue());
+            if (dataSnapshot.exists()) {
+                showItemData();
+            }else {
+                imgNoResult.setVisibility(View.VISIBLE);
+                mRecycler.setVisibility(View.GONE);
+            }
+        } catch (Exception e) {
+
+        }
+    }
+
+    @Override
     public void onCancelled(DatabaseError databaseError) {
 
     }
-
 
     @Override
     public void onDestroyView() {

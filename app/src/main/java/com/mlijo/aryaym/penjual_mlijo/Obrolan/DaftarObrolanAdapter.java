@@ -15,8 +15,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.mlijo.aryaym.penjual_mlijo.Base.BaseActivity;
 import com.mlijo.aryaym.penjual_mlijo.Base.ImageLoader;
-import com.mlijo.aryaym.penjual_mlijo.DBModel.KonsumenModel;
-import com.mlijo.aryaym.penjual_mlijo.DBModel.ObrolanModel;
+import com.mlijo.aryaym.penjual_mlijo.InformasiKonsumen.KonsumenModel;
 import com.mlijo.aryaym.penjual_mlijo.R;
 import com.mlijo.aryaym.penjual_mlijo.Utils.Constants;
 

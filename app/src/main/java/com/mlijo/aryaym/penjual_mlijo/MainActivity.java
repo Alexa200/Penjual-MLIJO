@@ -33,7 +33,7 @@ import com.mlijo.aryaym.penjual_mlijo.Base.BaseActivity;
 import com.mlijo.aryaym.penjual_mlijo.Base.DeviceToken;
 import com.mlijo.aryaym.penjual_mlijo.Base.ImageLoader;
 import com.mlijo.aryaym.penjual_mlijo.Base.InternetConnection;
-import com.mlijo.aryaym.penjual_mlijo.DBModel.PenjualModel;
+import com.mlijo.aryaym.penjual_mlijo.Pengaturan.PenjualModel;
 import com.mlijo.aryaym.penjual_mlijo.Dashboard.DashboardFragment;
 import com.mlijo.aryaym.penjual_mlijo.KelolaPenjualan.KelolaPenjualanFragment;
 import com.mlijo.aryaym.penjual_mlijo.KelolaProduk.KelolaProdukFragment;
@@ -249,6 +249,7 @@ public class MainActivity extends AppCompatActivity
                             @Override
                             public void onClick(DialogInterface dialogInterface, int i) {
                                 logOut();
+                                //OneSignal.sendTag(Constants.UID, null);
                                 // sessionManagerUser.logoutUser();
                                 //initInfo();
                             }
@@ -282,7 +283,7 @@ public class MainActivity extends AppCompatActivity
 
     private void logOut(){
         FirebaseAuth.getInstance().signOut();
-        OneSignal.sendTag(Constants.UID, null);
+        OneSignal.sendTag(Constants.UID, "");
         Intent intent = new Intent(this, AutentifikasiTeleponActivity.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
         startActivity(intent);

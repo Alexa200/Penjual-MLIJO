@@ -37,7 +37,6 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.mlijo.aryaym.penjual_mlijo.Base.BaseActivity;
 import com.mlijo.aryaym.penjual_mlijo.BuildConfig;
-import com.mlijo.aryaym.penjual_mlijo.DBModel.PenjualModel;
 import com.mlijo.aryaym.penjual_mlijo.Pengaturan.Service.LocationUpdatesService;
 import com.mlijo.aryaym.penjual_mlijo.Pengaturan.Service.LocationUtils;
 import com.mlijo.aryaym.penjual_mlijo.R;

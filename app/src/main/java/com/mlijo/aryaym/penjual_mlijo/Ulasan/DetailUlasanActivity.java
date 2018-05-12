@@ -7,8 +7,8 @@ import android.widget.TextView;
 
 import com.mlijo.aryaym.penjual_mlijo.Base.BaseActivity;
 import com.mlijo.aryaym.penjual_mlijo.Base.ImageLoader;
-import com.mlijo.aryaym.penjual_mlijo.DBModel.KonsumenModel;
-import com.mlijo.aryaym.penjual_mlijo.DBModel.ProdukModel;
+import com.mlijo.aryaym.penjual_mlijo.InformasiKonsumen.KonsumenModel;
+import com.mlijo.aryaym.penjual_mlijo.KelolaProduk.ProdukModel;
 import com.mlijo.aryaym.penjual_mlijo.R;
 import com.mlijo.aryaym.penjual_mlijo.Utils.Constants;
 import com.mlijo.aryaym.penjual_mlijo.Utils.DateFormatter;
@@ -17,7 +17,6 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-import com.mlijo.aryaym.penjual_mlijo.DBModel.UlasanModel;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;

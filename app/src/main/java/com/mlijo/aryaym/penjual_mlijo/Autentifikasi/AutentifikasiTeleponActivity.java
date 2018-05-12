@@ -26,7 +26,7 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-import com.mlijo.aryaym.penjual_mlijo.DBModel.PenjualModel;
+import com.mlijo.aryaym.penjual_mlijo.Pengaturan.PenjualModel;
 import com.mlijo.aryaym.penjual_mlijo.MainActivity;
 import com.mlijo.aryaym.penjual_mlijo.R;
 import com.mlijo.aryaym.penjual_mlijo.Utils.Constants;

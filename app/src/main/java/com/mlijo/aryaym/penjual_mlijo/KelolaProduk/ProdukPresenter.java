@@ -7,7 +7,6 @@ import android.widget.Toast;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.firestore.FirebaseFirestore;
-import com.mlijo.aryaym.penjual_mlijo.DBModel.ProdukModel;
 import com.mlijo.aryaym.penjual_mlijo.KelolaProduk.service.UploadPhotoThread;
 import com.mlijo.aryaym.penjual_mlijo.KelolaProduk.service.UploadPhotoThreadListener;
 import com.mlijo.aryaym.penjual_mlijo.Utils.Constants;

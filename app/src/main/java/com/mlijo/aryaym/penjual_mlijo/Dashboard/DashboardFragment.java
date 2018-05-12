@@ -11,7 +11,7 @@ import android.widget.Switch;
 import android.widget.TextView;
 
 import com.mlijo.aryaym.penjual_mlijo.Base.BaseActivity;
-import com.mlijo.aryaym.penjual_mlijo.DBModel.PenjualModel;
+import com.mlijo.aryaym.penjual_mlijo.Pengaturan.PenjualModel;
 import com.mlijo.aryaym.penjual_mlijo.R;
 import com.mlijo.aryaym.penjual_mlijo.Utils.Constants;
 import com.google.firebase.database.DataSnapshot;
